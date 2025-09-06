@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>Category: vector_db - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Hexo"><meta property="og:url" content="http://example.com/"><meta property="og:site_name" content="Hexo"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://example.com/img/og_image.png"><meta property="article:author" content="John Doe"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"Hexo","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories/">Categories</a></li><li class="is-active"><a href="#" aria-current="page">vector_db</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2024-02-02T17:15:00.000Z" title="2/2/2024, 12:15:00 PM">2024-02-02</time></span><span class="level-item">Updated&nbsp;<time dateTime="2025-09-06T17:08:12.150Z" title="9/6/2025, 1:08:12 PM">2025-09-06</time></span><span class="level-item"><a class="link-muted" href="/categories/vector-db/">vector_db</a></span><span class="level-item">6 minutes read (About 947 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/02/02/Milvus/">Milvus, A Purpose-Built Vector Data Management System</a></p><div class="content"><h1 id="Milvus-A-Purpose-Built-Vector-Data-Management-System"><a href="#Milvus-A-Purpose-Built-Vector-Data-Management-System" class="headerlink" title="Milvus: A Purpose-Built Vector Data Management System"></a>Milvus: A Purpose-Built Vector Data Management System</h1><p>Author: Jianguo Wang ,et al.</p>
+<h3 id="vector-database"><a href="#vector-database" class="headerlink" title="vector database"></a>vector database</h3><p><img src="https://lh7-us.googleusercontent.com/a1SSv6X8vFe2r4xKdwJtEs4gQZn1wZ0RoCCBWQeNyRfY5XoMlgPK3WDeeIylBIza92CYhsbici0HTGf0iNeIUZj-SRb5eqZQfXEX6QLCDCKpdtDAEUE06VT4zOJdThJPJJJGqjWh_1Fwqhx4e210APvifQ=s2048" alt="img"></p>
+<p>A new type of database specialized in storing and querying vector data. </p>
+<ul>
+<li><p>Traditional relational databases: precise attribute-based searches</p>
+</li>
+<li><p>Vector database: approximate similarity-based vector searches: find the k-nearest vectors to the query.</p>
+</li>
+</ul>
+<h3 id="Background-Motivation"><a href="#Background-Motivation" class="headerlink" title="Background &amp; Motivation"></a>Background &amp; Motivation</h3><p><img src="D:\dingblog\source\img\milvus\motivation.png"></p>
+<h3 id="Challenges"><a href="#Challenges" class="headerlink" title="Challenges"></a>Challenges</h3><p>Current works have the following limitations:</p>
+<ul>
+<li>They are not full-fledged systems and cannot handle large amount of data</li>
+<li>They cannot easily handle dynamic data while ensuring fast real-time searches</li>
+<li>They do not support advanced query processing</li>
+<li>They are not optimized for heterogeneous computing architecture with CPUs and GPUs</li>
+</ul>
+<h3 id="Milvus"><a href="#Milvus" class="headerlink" title="Milvus"></a>Milvus</h3><p>Milvus: a purpose-built vector data management system for managing large-scale and dynamic vector data to enable data science and AI applications.</p>
+<p>Milvus incorporates query processing, indexing and storage management and CPU-GPU codesign into the whole system, successfully addressing the previous issues.</p>
+<h4 id="Overall-Architecture-of-Milvus"><a href="#Overall-Architecture-of-Milvus" class="headerlink" title="Overall Architecture of Milvus"></a>Overall Architecture of Milvus</h4><p><img src="https://lh7-us.googleusercontent.com/fLfYZw5bi5SJqc526JvvWF9Cx-v3_mwoboDJgCSvyPyQZPXp9-9V09R0zzmJnSR_IJ5VzQ2cdgPujHesMvg7GIOmnH67yceAwLh3BDXYypLXBQCsHiMAfkhMSBf8fxVTnx-vCywD4YGqTruMwE_VB0XuzQ=s2048" alt="img"></p>
+<h4 id="Query-Processing"><a href="#Query-Processing" class="headerlink" title="Query Processing"></a>Query Processing</h4><p>Support of query types:</p>
+<ul>
+<li>Vector Query (1 vector)</li>
+<li><strong>Attribute Filtering</strong> (1 vector + n attribute constraints)<strong>(Advanced Query)</strong></li>
+<li><strong>Multi-vector Query</strong> (n vectors)<strong>(Advanced Query)</strong></li>
+</ul>
+<p>Support of similarity functions:</p>
+<ul>
+<li>Euclidean distance</li>
+<li>Inner product</li>
+<li>Cosine similarity</li>
+<li>Hamming distance</li>
+<li>Jaccard distance</li>
+</ul>
+<h4 id="Attribute-Filtering"><a href="#Attribute-Filtering" class="headerlink" title="Attribute Filtering"></a>Attribute Filtering</h4><h5 id=""><a href="#" class="headerlink" title=""></a><img src="https://lh7-us.googleusercontent.com/PIxpQQ5Z7gQ1MACU9tAa6PSjklRxVUxmoLkX62A7-mFhSS_PPCgg7QmXoNU8hQZtn8-MkIa9QyzLXOIF8IZniVmDClHUvkxCUH88iuBP7SFyVzzMtErNFWB_WINUlC6e9gFy6QyJZ2KQZvAd59vPHIgMiA=s2048" alt="img"></h5><ul>
+<li><p>A: ①obtain the satisfied vectors②fully scann them</p>
+</li>
+<li><p>B: ①obtain the satisfied vectors②use bitmap to find the answer</p>
+</li>
+<li><p>C: ①obtain more than k results②fully scan and find those satisfy the attribute constraint</p>
+</li>
+<li><p>D: estimate the cost of A,B,C and find the best one</p>
+</li>
+<li><p>E (Milvus): Partition-based filtering</p>
+<ol>
+<li>Create partitions for data</li>
+<li>Maintain min-max indexes for different partitions</li>
+<li>Skip the partitions whose range of attribute does not overlap with the queries’</li>
+<li>Find the overlapping partitions, and apply strategy D(cost-based) within each partition</li>
+</ol>
+</li>
+</ul>
+<h4 id="Multi-vector-Queries"><a href="#Multi-vector-Queries" class="headerlink" title="Multi-vector Queries"></a>Multi-vector Queries</h4><ul>
+<li><h5 id="For-decomposable-similarity-functions-Use-aggregate-functions-to-concentrate-the-vectors-and-find-the-k-nearest-neighbors-based-on-the-concentrated-vector-vector-fusion"><a href="#For-decomposable-similarity-functions-Use-aggregate-functions-to-concentrate-the-vectors-and-find-the-k-nearest-neighbors-based-on-the-concentrated-vector-vector-fusion" class="headerlink" title="For decomposable similarity functions: Use aggregate functions to concentrate the vectors and find the k nearest neighbors based on the concentrated vector (vector fusion)"></a>For decomposable similarity functions: Use aggregate functions to concentrate the vectors and find the k nearest neighbors based on the concentrated vector (vector fusion)</h5></li>
+<li><p>For indecomposable similarity functions:</p>
+</li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/2nbN36rss_FJXsQqeqROW-fWUY1oggQ7aHsP796HQdaQCTObmj09hl2koBem7ygklF9_iVH3Jg3A2GCUYbjmSQozPgdqe2jIgjqc8YCE9-HBJT_EQw1hK6NOTqXWCXhPynJHyr4CnnaMFppibQlTjMcZaA=s2048" alt="img"></p>
+<h4 id="Indexing-Querying"><a href="#Indexing-Querying" class="headerlink" title="Indexing (Querying)"></a>Indexing (Querying)</h4><ul>
+<li><p>Quantization-based Indexing: (Quantization: represent vectors with a codebook. First find n nearest clusters to q, then use the indexing to search within these clusters.)</p>
+<ul>
+<li><p>IVF_FLAT</p>
+</li>
+<li><p>IVF_SQ8</p>
+</li>
+<li><p>IVF_PQ</p>
+<p><img src="https://lh7-us.googleusercontent.com/cQ7gqM4L-mFpA5ciP5EhImJx1pEpdO4lO5yWXXARHCgnVeDfLJcU8feY_Uc-ivjsKUzS-h5p_tGCnv5nSRARPKwspRN9DCXtt3_WhkmQZLdow7A7J97vm1QItFTehk6aFpiek_Qc7ow7X_wTIdxyjW90LQ=s2048" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>Graph-based indexing:</p>
+<ul>
+<li>HNSW</li>
+<li>RNSG</li>
+</ul>
+</li>
+</ul>
+<h4 id="Vector-and-Attribute-Storage"><a href="#Vector-and-Attribute-Storage" class="headerlink" title="Vector and Attribute Storage"></a>Vector and Attribute Storage</h4><p>To facilitate query processing, Milvus stores vectors and attributes in a columnar fasion.</p>
+<ul>
+<li><strong>Vectors</strong>: different vectors of entities are stored together correspondingly. </li>
+<li><strong>Attributes</strong>: &lt;attr value, row ID&gt; pairs + skipping indexes (min-max) for pages</li>
+</ul>
+<p><img src="D:\dingblog\source\img\milvus\storage.png"></p>
+<p>Milvus also relies on LRU-based buffer and supports multiple file systems.</p>
+<h4 id="Optimizations-for-Heterogeneous-Computing"><a href="#Optimizations-for-Heterogeneous-Computing" class="headerlink" title="Optimizations for Heterogeneous Computing"></a>Optimizations for Heterogeneous Computing</h4><p>How to find the top k similar vectors for multiple queries efficiently?</p>
+<ul>
+<li>CPU-oriented Optimization</li>
+<li>GPU-oriented Optimization</li>
+<li>CPU-GPU codesign</li>
+</ul>
+<h4 id="CPU-oriented-Optimization"><a href="#CPU-oriented-Optimization" class="headerlink" title="CPU-oriented Optimization"></a>CPU-oriented Optimization</h4><ul>
+<li><h5 id="Faiss-leveraged-OpenMP-to-realize-multi-threading-Each-thread-process-a-query-at-a-time-Two-issues"><a href="#Faiss-leveraged-OpenMP-to-realize-multi-threading-Each-thread-process-a-query-at-a-time-Two-issues" class="headerlink" title="Faiss leveraged OpenMP to realize multi-threading. Each thread process a query at a time. Two issues:"></a><strong>Faiss</strong> leveraged OpenMP to realize multi-threading. Each thread process a query at a time. Two issues:</h5><ul>
+<li>High cache-missing rate (requires to stream the entire data into caches, cannot reuse)</li>
+<li>Cannot fully exploit cores when query number is small</li>
+</ul>
+</li>
+<li><p><strong>Milvus</strong> assign threads to data vectors instead of query vectors to address the 2nd issue.</p>
+<ul>
+<li>Divide the queries into blocks s.t. each query block and its heaps can fit in L3 cache.</li>
+<li>Results are managed in heaps. To obtain the final results, merge the result.</li>
+<li>Milvus is also capable of automatically choosing SIMD instructions for functions.</li>
+</ul>
+</li>
+</ul>
+<h5 id="GPU-oriented-Optimization"><a href="#GPU-oriented-Optimization" class="headerlink" title="GPU-oriented Optimization"></a>GPU-oriented Optimization</h5><ul>
+<li><strong>Faiss</strong>: k&lt;&#x3D;1024 because of the limit of memory</li>
+<li><strong>Milvus</strong>: divide k into different rounds, each round expanding the obtained result set until reaches the required number.Faiss: must set the number of GPUs in advance; dynamic segment-based scheduling that assign search tasks to available devices</li>
+</ul>
+<h5 id="CPU-GPU-Co-design"><a href="#CPU-GPU-Co-design" class="headerlink" title="CPU-GPU Co-design"></a>CPU-GPU Co-design</h5><ul>
+<li><p>Limitations of <strong>Faiss</strong> (IVF_SQ8):Low PCIe bandwidth utilization (1 bucket per time)Data transfer makes GPU computing unbeneficial</p>
+</li>
+<li><p><strong>Milvus</strong> (SQ8H):High bandwidth utilization (Multiple buckets loaded per time)Assess the running mode (GPU-only or hybrid) based on the batch size</p>
+<p><img src="https://lh7-us.googleusercontent.com/1bi-T_L1k4IU-SxJ1jBMFvNr0yG9j_xd_6dVzgkk1XvZyRNptDrTs4MYPhyZX4lzrCA2enF8bQ06sYe_SKCdhR3TiuSA8dA4eesCGFZ2b6ZjtxB5ptqr-3KiTfyS7FFMEh6MNxuXI2IpTG9N2G3Uj-GS4A=s2048" alt="img"></p>
+</li>
+</ul>
+<h3 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h3><ul>
+<li>Recommender System</li>
+<li><strong>Image Recognition</strong></li>
+<li><strong>Chemical Structure Analysis</strong></li>
+<li>etc.</li>
+</ul>
+<h3 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h3><h4 id="Evaluation-Comparing-with-other-systems"><a href="#Evaluation-Comparing-with-other-systems" class="headerlink" title="Evaluation (Comparing with other systems)"></a>Evaluation (Comparing with other systems)</h4><ul>
+<li>10M vectors from SIFT1B and Deep1B</li>
+<li>10000 random queries</li>
+</ul>
+<p><img src="https://lh7-us.googleusercontent.com/ENprp6rC88V22r2w7OkwVJ_iQCRo3JWz16ulMGvlaUWXf7yeBZPw4LG3N0ntxUXmMXHia-7ZOKVW5rLj6407GOoVLfTZPbeQTnDKER5bW9ImUvkkMiJvF9C8R2ngaaEovkgmOvAsRdMBW891rUByVLa5ZA=s2048" alt="img"></p>
+<h4 id="Evaluation-cache-aware-design"><a href="#Evaluation-cache-aware-design" class="headerlink" title="Evaluation: cache-aware design"></a>Evaluation: cache-aware design</h4><p><img src="https://lh7-us.googleusercontent.com/5SyAZyajVqTUSdJOh2ROCylw6dl8Ri1EmLd-Fzz539KXGJq4XVcXVBfslC23JIFzRQXnGBSd2hXKl-A43FQoC66goZvL_nzjsZLeNt-PeWhFulHk_DyNN3TkoZ53SboSvDcVOra9R9dIpMwLmUa2Wg3aAA=s2048" alt="img"></p>
+<h4 id="Evaluation-Attribute-Filtering"><a href="#Evaluation-Attribute-Filtering" class="headerlink" title="Evaluation-Attribute Filtering"></a>Evaluation-Attribute Filtering</h4><p><img src="https://lh7-us.googleusercontent.com/-m3podLKsG3KUBocsv_qeZMc1hfrs8SLUhxwradn7zReuSe3t9-Zy7we5VspsTUWl_lQvsFPXfIDb7dNdcvl5-dalb92GlQ1lm5bempLPhhgkqNyiDP2yhU2Gl6ydjX4QF7RU_5VOqgKLL66uYwzRuGsrw=s2048" alt="img"></p>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives/"><p class="title">36</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories/"><p class="title">15</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags/"><p class="title">28</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="me noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/Algorithm/C/"><span class="level-start"><span class="level-item">C++</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/Algorithm/C/job/"><span class="level-start"><span class="level-item">job</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/Programming-Language/"><span class="level-start"><span class="level-item">Programming Language</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming-Language/C/"><span class="level-start"><span class="level-item">C++</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/db-index/"><span class="level-start"><span class="level-item">db_index</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/db-index/predictive/"><span class="level-start"><span class="level-item">predictive</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/machine-learning/"><span class="level-start"><span class="level-item">machine learning</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/machine-learning/Dive-into-Deep-Learning-Notes/"><span class="level-start"><span class="level-item">Dive into Deep Learning-Notes</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/machine-learning/Dive-into-Deep-Learning-Notes/optimization/"><span class="level-start"><span class="level-item">optimization</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/mlsys/"><span class="level-start"><span class="level-item">mlsys</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/python/"><span class="level-start"><span class="level-item">python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/python/basics/"><span class="level-start"><span class="level-item">basics</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/ubuntu/"><span class="level-start"><span class="level-item">ubuntu</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/vector-db/"><span class="level-start"><span class="level-item">vector_db</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-09-06T17:08:12.153Z">2025-09-06</time></p><p class="title"><a href="/2025/09/06/%E4%BD%BF%E7%94%A8vue%E5%92%8Celementui%E9%81%87%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E5%9D%91/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-09-06T17:08:12.152Z">2025-09-06</time></p><p class="title"><a href="/2025/09/06/hello-world/">Hello World</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-09-06T17:08:12.150Z">2025-09-06</time></p><p class="title"><a href="/2025/09/06/CNN%20Convolution/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2025-09-06T17:08:12.150Z">2025-09-06</time></p><p class="title"><a href="/2025/09/06/MySQL%E4%B8%80%E4%BA%9B%E5%BA%95%E5%B1%82%E7%9A%84%E4%B8%9C%E8%A5%BF/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-08-20T17:50:00.000Z">2024-08-20</time></p><p class="title"><a href="/2024/08/20/lc_141_%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/">&lt;数据结构/算法&gt; leetcode hot100系列. 141(142). 环形链表</a></p><p class="categories"><a href="/categories/Algorithm/">Algorithm</a> / <a href="/categories/Algorithm/C/">C++</a> / <a href="/categories/Algorithm/C/job/">job</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2025/09/"><span class="level-start"><span class="level-item">September 2025</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/08/"><span class="level-start"><span class="level-item">August 2024</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/07/"><span class="level-start"><span class="level-item">July 2024</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/06/"><span class="level-start"><span class="level-item">June 2024</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/03/"><span class="level-start"><span class="level-item">March 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2024/02/"><span class="level-start"><span class="level-item">February 2024</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/06/"><span class="level-start"><span class="level-item">June 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/05/"><span class="level-start"><span class="level-item">May 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/02/"><span class="level-start"><span class="level-item">February 2023</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/01/"><span class="level-start"><span class="level-item">January 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/C/"><span class="tag">C++</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/STL/"><span class="tag">STL</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/algorithm/"><span class="tag">algorithm</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/backtrack/"><span class="tag">backtrack</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/binary-tree/"><span class="tag">binary-tree</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/copy/"><span class="tag">copy</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cpu-gpu-co-design/"><span class="tag">cpu-gpu co-design</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/database/"><span class="tag">database</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/distributed-system/"><span class="tag">distributed system</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/distribution-shift/"><span class="tag">distribution shift</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dp/"><span class="tag">dp</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/greenplum/"><span class="tag">greenplum</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hash/"><span class="tag">hash</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/heap/"><span class="tag">heap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/index/"><span class="tag">index</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/machine-learning/"><span class="tag">machine learning</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mlsys/"><span class="tag">mlsys</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/optimization/"><span class="tag">optimization</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/postgresql/"><span class="tag">postgresql</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/predict/"><span class="tag">predict</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python37/"><span class="tag">python37</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/slide-window/"><span class="tag">slide-window</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sort/"><span class="tag">sort</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/two-pointers/"><span class="tag">two-pointers</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ubuntu/"><span class="tag">ubuntu</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/variable/"><span class="tag">variable</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vector-database/"><span class="tag">vector database</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2025 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
